@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather search</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Check the weather ☁️</h1>
+
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <form action="/weather" method="POST">
+      <input type="text" name="city" placeholder="Enter city name…" required>
+      <button type="submit">Get weather</button>
+    </form>
+  </div>
+</body>
+</html>
